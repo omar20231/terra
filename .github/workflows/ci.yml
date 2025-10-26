@@ -1,0 +1,11 @@
+name: linting
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout code
+          uses: actions/checkout@v2
+        - name: Lint Terraform
+          uses: actionshub/terraform-lint@main
